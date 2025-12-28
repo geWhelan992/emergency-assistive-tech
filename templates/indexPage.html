@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fire Alarm Alert for Deaf Users</title>
-  <style>
-    body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Assistive Technology for Deaf & Hard of Hearing</title>
+    <style>
+        body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to right, #c5def3, #9fc7fc);
@@ -78,7 +78,6 @@
             margin-top: 30px;
         }
 
-
         p, li {
             font-size: 16px;
             line-height: 1.6;
@@ -87,65 +86,78 @@
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-            <!-- The menu tab  -->
-        <div class="topnav">
-            <a href="{{ url_for('home') }}">Home</a>
-            <a href="{{ url_for('index_page') }}">Fire Alarm Demo</a>
-            <a href="{{ url_for('intercom_page') }}">Video</a>
-            <a href="{{ url_for('instruction_page') }}">Set up Guide</a>
-        </div>
- 
-    <h1>Possible Solution for Deaf & Hard of Hearing Users</h1>
-    <p>Helping deaf users know when a fire alarm goes off and how to safely evacuate.</p>
-  </header>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="demoPage.html">Fire Alarm Demo</a>
+        <a href="intercom.html">Video</a>
+        <a href="instructionPage.html">Set up Guide</a>
+    </div>
+        <h1>Emergency Assistive Technology for Deaf & Hard of Hearing</h1>
+        <p>Stay safe and informed! </p>
+    </header>
 
-  <section>
-    <h2>Simulate Fire Alarm Alert</h2>
-    <label for="location-select">Select your location:</label><br />
-    <select id="location-select">
-      <option value="School">School</option>
-      <option value="Office">Office</option>
-      <option value="Airport">Airport</option>
-      <option value="Shopping Mall">Shopping Mall</option>
-    </select><br />
-    <button id="simulate-btn">Simulate Fire Alarm</button>
 
-    <div id="alert-message"></div>
-  </section>
+    <main>
 
-  <audio id="alarm-sound">
-  <source src="{{ url_for('static', filename='firealarm.mp3') }}" type="audio/mpeg">
-</audio>
+        <!-- Why I am doing this project -->
+        <section>
+            <h2>Why I am doing this project</h2>
+            <p>I chose this project because I am profoundly deaf and have personally experined how inaccessible emergency announcements and alarms can be.  Through my own experiences and those of other deaf people, I realised that emergency systems often assume everyone can hear, which can place deaf and hard of hearing people at serious risk.  </p>
+        </section>
 
-  <script>
-    const instructions = {
-      School: "Fire alarm detected! Use the nearest hallway exit and gather at the football field.",
-      Office: "Fire alarm detected! Exit using the back stairwell and wait at the car park for headcount.",
-      Airport: "Fire alarm detected! Follow illuminated emergency exits and await airline staff instructions.",
-      "Shopping Mall": "Fire alarm detected! Use the green emergency signs and go to the main parking area."
-    };
+        <!-- Why It Matters -->
+        <section>
+            <h2>Why It Matters</h2>
+            <p>Standard alarms and intercoms communicate through sound, leaving deaf individuals vulnerable in emergencies. This project prompts a crucial question: if routine communication is already a barrier, how can a deaf person be alerted when every second counts?</p>
+        </section>
 
-    const alarmSound = document.getElementById("alarm-sound");
+        
+        <!-- Goal of project -->
+        <section>
+            <h2>Goal of project</h2>
+            <p>The goal of my project was to explore how emergency and communication systems could be made more accessible for deaf people, particularly in public spaces. I also wish to: </p>
+            <ul>
+                <ol>Increase awareness of what it is like to be deaf.</ol>
+                <ol>To highlight gaps in curent legislation.</ol>
+                <ol>To explore practical and realistic solutions that could work for deaf people.</ol>
+            </ul>
+        </section>
 
-    document.getElementById("simulate-btn").addEventListener("click", () => {
-      const location = document.getElementById("location-select").value;
-      const alertDiv = document.getElementById("alert-message");
+        <!-- Possible soultions -->
+        <section>
+            <h2>Possible soultions </h2>
+            <ol>
+                <ul>Visual Alerts.</ul>
+                    <p>I explored visual alerts system using Micro:bit connected to screens to demonstrate how visual warnings could be delivered clearly and instantly.</p>
+               <br>
+                <ul>Phone Alerts</ul>
+                    <p>I examined existing phone alerts systems; however, while these exist, listening devices often have false positive and the vibrations alerts are not strong and clear enough for deaf users in high stress situation. </p>
+               <br>
+                    <ul>Fire Alarms + Paging System extention. </ul>
+                        <p>I learned that many fire alarms system already have bulit in paging and messaging capabilities.   I am recommending that this is extended to send emergency alerts directly to mobile phones, rather than limiting alerts to pagers, used by staff.  In addition this should be made law by including in IS 3218.   </p>
+                <br>
+                    <ul>QR Code</ul>
+                        <p>Rather than relying on an app continuously listening for alarms, which is restricted by the phone operating systems, I am proposing a more realstic system based on WiFi registion and text alerts. </p>
+             </ol>
+        </section>
 
-      alertDiv.style.display = "block";
-      alertDiv.textContent = instructions[location];
 
-      //play fire alarm sound 
-      alarmSound.currentTime = 0;
-      alarmSound.play();
+        <!-- Video -->
+        <section class="demo">
+            <h2>Video & Set up Guide</h2>
+            <p>Click the video tab and view the video to experience what it's like to be deaf or hard of hearing.</p>
+            <p>Click the Set up Guide tab and read the guidance on how to set it up on your devices.</p>
+        </section>
 
-    });
-  </script>
+    </main>
 
-  <br><br><br><br><br><br><br>
-      <!-- Footer -->
+    <!-- Footer -->
     <footer>
         &copy; 2025 Emergency Safety Protocol for Deaf Users.
     </footer>
+
 </body>
 </html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fire Alarm Alert for Deaf Users</title>
+  <style>
+    body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #c5def3, #9fc7fc);
+            color: #333;
+        }
+
+        header {
+            background-color: #37a9b7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .topnav {
+            margin-bottom: 10px;
+        }
+
+        .topnav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .topnav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            color: #d32f2f;
+            display: flex;
+            align-items: center;
+        }
+
+        section h2::before {
+            content: "🔔"; 
+            margin-right: 10px;
+        }
+
+        ol, ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+            <!-- The menu tab  -->
+        <div class="topnav">
+            <a href="{{ url_for('index_page') }}">Home</a>
+            <a href="{{ url_for('demo_page') }}">Fire Alarm Demo</a>
+            <a href="{{ url_for('intercom_page') }}">Video</a>
+            <a href="{{ url_for('instruction_page') }}">Set up Guide</a>
+        </div>
+ 
+    <h1>Possible Solution for Deaf & Hard of Hearing Users</h1>
+    <p>Helping deaf users know when a fire alarm goes off and how to safely evacuate.</p>
+  </header>
+
+  <section>
+    <h2>Simulate Fire Alarm Alert</h2>
+    <label for="location-select">Select your location:</label><br />
+    <select id="location-select">
+      <option value="School">School</option>
+      <option value="Office">Office</option>
+      <option value="Airport">Airport</option>
+      <option value="Shopping Mall">Shopping Mall</option>
+    </select><br />
+    <button id="simulate-btn">Simulate Fire Alarm</button>
+
+    <div id="alert-message"></div>
+  </section>
+
+  <audio id="alarm-sound">
+  <source src="{{ url_for('static', filename='firealarm.mp3') }}" type="audio/mpeg">
+</audio>
+
+  <script>
+    const instructions = {
+      School: "Fire alarm detected! Use the nearest hallway exit and gather at the football field.",
+      Office: "Fire alarm detected! Exit using the back stairwell and wait at the car park for headcount.",
+      Airport: "Fire alarm detected! Follow illuminated emergency exits and await airline staff instructions.",
+      "Shopping Mall": "Fire alarm detected! Use the green emergency signs and go to the main parking area."
+    };
+
+    const alarmSound = document.getElementById("alarm-sound");
+
+    document.getElementById("simulate-btn").addEventListener("click", () => {
+      const location = document.getElementById("location-select").value;
+      const alertDiv = document.getElementById("alert-message");
+
+      alertDiv.style.display = "block";
+      alertDiv.textContent = instructions[location];
+
+      //play fire alarm sound 
+      alarmSound.currentTime = 0;
+      alarmSound.play();
+
+    });
+  </script>
+
+  <br><br><br><br><br><br><br>
+      <!-- Footer -->
+    <footer>
+        &copy; 2025 Emergency Safety Protocol for Deaf Users.
+    </footer>
+</body>
+</html>

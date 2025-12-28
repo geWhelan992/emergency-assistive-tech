@@ -3,12 +3,12 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def home():
-    return render_template("homePages.html")
-
-@app.route("/index")
 def index_page():
-    return render_template("indexPage.html")
+    return render_template("index_page.html")
+
+@app.route("/demo")
+def demo_page():
+    return render_template("demoPage.html")
 
 @app.route("/intercom")
 def intercom_page():
