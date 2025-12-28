@@ -111,32 +111,7 @@ p, li {
     <div id="intercom-message"></div>
   </section>
 
-  <!-- Scripts -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js"></script>
-  <script>
-    // Fire alarm instructions
-    const instructions = {
-      School: "Fire alarm detected! Use the nearest hallway exit and gather at the football field.",
-      Office: "Fire alarm detected! Exit using the back stairwell and wait at the car park for headcount.",
-      Airport: "Fire alarm detected! Follow illuminated emergency exits and await airline staff instructions.",
-      "Shopping Mall": "Fire alarm detected! Use the green emergency signs and go to the main parking area."
-    };
 
-    document.getElementById("simulate-btn").addEventListener("click", () => {
-      const location = document.getElementById("location-select").value;
-      const alertDiv = document.getElementById("alert-message");
-      alertDiv.style.display = "block";
-      alertDiv.textContent = instructions[location];
-    });
-
-    // Real-time intercom alerts
-    var socket = io();
-    socket.on('intercom_alert', function(data){
-      const intercomDiv = document.getElementById('intercom-message');
-      intercomDiv.style.display = "block";
-      intercomDiv.textContent = `Intercom at ${data.intercom}: ${data.message}`;
-    });
-  </script>
   <br><br><br><br><br><br>
 
 
