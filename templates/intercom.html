@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fire Alarm & Intercom Demo</title>
+  <style>body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #c5def3, #9fc7fc);
+    color: #333;
+}
+
+header {
+    background-color: #37a9b7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.topnav {
+    margin-bottom: 10px;
+}
+
+.topnav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+section h2 {
+    color: #d32f2f;
+    display: flex;
+    align-items: center;
+}
+
+section h2::before {
+    content: "🔔"; /* Fun icon */
+    margin-right: 10px;
+}
+
+ol, ul {
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+p, li {
+    font-size: 16px;
+    line-height: 1.6;
+}
+    #alert-message { margin-top: 1em; padding: 1em; border-radius: 5px; background-color: #f2dede; color: #a94442; display: none; }
+    #intercom-message { margin-top: 1em; padding: 1em; border-radius: 5px; background-color:#d9edf7; color:#31708f; display:none; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header with menu -->
+  <header>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="demoPage.html">Fire Alarm Demo</a>
+        <a href="intercom.html">Video</a>
+        <a href="instructionPage.html">Set up Guide</a>
+    </div>
+
+    <h1>Flintstone Video</h1>
+    <p>What it is like to be a deaf person</p>
+  </header>
+
+
+
+  <!-- Video -->
+<section>
+  <h2>Video</h2>
+  <p>This video shows what it is like to have different levels of hearing loss.</p>
+  <p>Brought to you by the Flintstones:</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/wn3PnBWRC5c?si=HQqDlKOhU3CAP8Ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+  <br><br><br><br><br><br>
+
+
+
+<video width="640" height="360" controls style="display:block; margin:0 auto;">
+  <source src="Flintstones.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <br><br><br><br><br><br><br><br><br>
+  <!-- Footer -->
+  <footer>
+      &copy; 2025 Emergency Safety Protocol for Deaf Users.
+  </footer>
+</body>
+</html>

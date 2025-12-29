@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Assistive Technology for Deaf & Hard of Hearing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #c5def3, #9fc7fc);
+            color: #333;
+        }
+
+        header {
+            background-color: #37a9b7;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .topnav {
+            margin-bottom: 10px;
+        }
+
+        .topnav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .topnav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            color: #d32f2f;
+            display: flex;
+            align-items: center;
+        }
+
+        section h2::before {
+            content: "🔔"; 
+            margin-right: 10px;
+        }
+
+        ol, ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+     <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="demoPage.html">Fire Alarm Demo</a>
+        <a href="intercom.html">Video</a>
+        <a href="instructionPage.html">Set up Guide</a>
+    </div>
+        <h1>Setting Up Emergency Alerts on Your Device</h1>
+        <p>Read the instructions below to activate alerts and stay informed during emergencies. </p>
+    </header>
+
+
+    <main>
+
+        <!-- built-in emergency alerts -->
+       <section>
+  <h2>1. Enable built-in emergency alerts (recommended baseline)</h2>
+
+  <p>
+    These don’t detect sound, but they notify you when authorities trigger public alarms
+    (sirens, evacuations, etc.).
+  </p>
+
+  <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+
+    <!-- iPhone -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 iPhone</h3>
+      <ul>
+        <li>Settings → Notifications → Emergency Alerts</li>
+        <li>Turn on:
+          <ul>
+            <li>Emergency Alerts</li>
+            <li>Public Safety Alerts</li>
+            <li>Severe Alerts</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Android -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 Android</h3>
+      <ul>
+        <li>Settings → Safety & emergency → Wireless emergency alerts</li>
+        <li>Enable all alert types</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr style="margin: 20px 0;">
+
+  <ul>
+    <li><strong>Best for:</strong> Government-issued alarms</li>
+    <li><strong>Limitation:</strong> Won’t trigger from hearing a siren nearby</li>
+  </ul>
+</section>
+
+
+        <!-- sound-recognition features -->
+       <section>
+  <h2>2. Use sound-recognition features (detects alarms by hearing them)</h2>
+
+  <p>This is the closest to “notify me when an alarm sounds nearby.”</p>
+
+  <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+
+    <!-- iPhone -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 iPhone (iOS 14+)</h3>
+      <ul>
+        <li>Settings → Accessibility → Sound Recognition</li>
+        <li>Turn on Sound Recognition</li>
+        <li>Select sounds like:
+          <ul>
+            <li>Siren</li>
+            <li>Smoke alarm</li>
+            <li>Fire alarm</li>
+          </ul>
+        </li>
+      </ul>
+      <p>Your phone will send a notification when it hears these sounds.</p>
+    </div>
+
+    <!-- Android -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 Android</h3>
+      <ul>
+        <li>Settings → Accessibility → Sound Notifications</li>
+        <li>Enable Sound Notifications</li>
+        <li>Choose alarm types (sirens, fire alarms, etc.)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr style="margin: 20px 0;">
+
+  <ul>
+    <li><strong>Works in:</strong> Real time</li>
+    <li><strong>Limitation:</strong> Requires microphone access and may miss alarms in loud areas</li>
+  </ul>
+</section>
+
+
+        
+        <!-- Use automation apps -->
+<section>
+  <h2>3. Use automation apps (advanced / customizable)</h2>
+
+  <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+
+    <!-- Android -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 Android</h3>
+      <ul>
+        <li><strong>Tasker</strong> or <strong>IFTTT</strong></li>
+        <li>Trigger:
+          <ul>
+            <li>Sound detection</li>
+            <li>Location</li>
+          </ul>
+        </li>
+        <li>Action:
+          <ul>
+            <li>Push notification</li>
+            <li>SMS</li>
+            <li>Vibration</li>
+            <li>Smartwatch alert</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- iPhone -->
+    <div style="flex: 1; min-width: 250px;">
+      <h3>📱 iPhone</h3>
+      <ul>
+        <li>Shortcuts (limited sound triggers)</li>
+        <li>Third-party safety apps (see below)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr style="margin: 20px 0;">
+
+  <ul>
+    <li><strong>Advantage:</strong> Highly customizable</li>
+    <li><strong>Limitation:</strong> More setup required, sometimes paid</li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>4. Install public safety & alert apps</h2>
+
+  <p>These notify you when alarms or emergencies are reported in your area.</p>
+
+  <h3>📲 Popular examples</h3>
+  <ul>
+    <li>Citizen</li>
+    <li>PulsePoint</li>
+    <li>FEMA app (US)</li>
+    <li>Local government emergency apps</li>
+  </ul>
+
+  <hr style="margin: 20px 0;">
+
+  <ul>
+    <li><strong>Benefit:</strong> Location-based alerts</li>
+    <li><strong>Limitation:</strong> Depends on official reporting, not direct sound</li>
+  </ul>
+</section>
+
+
+<section>
+  <h2>5. Wearables & smart devices (optional)</h2>
+
+  <p>If you use a smartwatch:</p>
+
+  <ul>
+    <li>Enable mirror phone notifications</li>
+    <li>Some watches vibrate immediately when emergency or sound alerts trigger</li>
+  </ul>
+
+  <hr style="margin: 20px 0;">
+
+  <p><strong>Useful if:</strong> Your phone is in a bag or on silent.</p>
+</section>
+
+
+<section>
+  <h2>Best setup for most people</h2>
+
+  <p>Combine these for reliability:</p>
+
+  <ol>
+    <li>Emergency Alerts → ON</li>
+    <li>Sound Recognition / Sound Notifications → ON</li>
+    <li>One local safety app installed</li>
+  </ol>
+
+  <p>
+    This setup covers both official alerts and nearby audible alarms.
+  </p>
+
+  <p>
+    If you tell me:
+    <ul>
+      <li>iPhone or Android</li>
+      <li>Country / city</li>
+      <li>Type of alarms (sirens, school, factory, evacuation)</li>
+    </ul>
+    …I can give you a step-by-step setup tailored exactly to your situation.
+  </p>
+</section>
+
+
+
+    </main>
+<br><br><br><br>
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Emergency Safety Protocol for Deaf Users.
+    </footer>
+
+</body>
+</html>
